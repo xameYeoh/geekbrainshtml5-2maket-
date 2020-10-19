@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-VariableFont_wght.ttf);
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -45,6 +52,7 @@ a {
 .navigation {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     &__link_cart {
         margin: 0 20px;
     }
@@ -83,9 +91,17 @@ a {
     &__container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     &__link_to-main-page {
-        color: #ffffff;
+        font-size: 34px;
+        font-family: "Raleway";
+        color: rgb(255, 255, 255);
+        line-height: 1.2;
+        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &__navigation-bar {
         display: flex;
@@ -127,6 +143,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #ffffff;
     &__title {
         font-size: 36px;
         font-family: "Raleway";
@@ -197,7 +214,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    justify-content: space-between;
     .text {
         width: 760px;
     }
