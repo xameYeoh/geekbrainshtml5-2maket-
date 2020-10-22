@@ -1,14 +1,5 @@
-@font-face {
-    font-family: "Raleway";
-    src: url(../fonts/Raleway-VariableFont_wght.ttf);
-    font-family: "Montserrat";
-    src: url(../fonts/Montserrat-Medium.ttf);
-}
-
-* {
-    padding: 0;
-    margin: 0;
-}
+@import "reset.scss";
+@import "fonts.scss";
 
 a {
     text-decoration: none;
@@ -25,15 +16,17 @@ a {
     color: rgb(140, 140, 140);
     line-height: 1.714;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .title {
     font-size: 30px;
-    font-family: "Raleway";
+    font-family: "Raleway SemiBold";
     color: rgb(85, 85, 85);
     font-weight: bold;
     line-height: 1.2;
     text-align: center;
+    margin-bottom: 24px;
 }
 
 .page-subject {
@@ -43,6 +36,7 @@ a {
     font-weight: bold;
     line-height: 1.2;
     text-align: center;
+    margin-bottom: 19px;
 }
 
 .container {
@@ -82,12 +76,31 @@ a {
     background-color: #464646;
 }
 
+.light-brown-button {
+    color: #ffffff;
+
+    width: 170px;
+    height: 53px;
+    background-color: #998675;
+    border-radius: 3px;
+    border: none;
+
+    font-size: 14px;
+    font-family: "Raleway";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.643;
+    text-align: center;
+}
+
 .header {
     min-height: 1024px;
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    color: #ffffff;
     @include responsive-image-background("../images/header-background.png");
     &__container {
         display: flex;
@@ -157,6 +170,15 @@ a {
         flex-direction: column;
         align-items: center;
         width: 595px;
+        .text {
+            font-size: 16px;
+            font-family: "Montserrat Light";
+            font-weight: 300;
+            font-style: normal;
+            color: rgb(255, 255, 255);
+            line-height: 1.5;
+            text-align: center;
+        }
     }
     &__button {
         width: 40px;
@@ -170,43 +192,52 @@ a {
             background: url(../icons/header-left-button-icon.png);
             transform: scale(-1, 1);
         }
-        &_get-started {
-            color: #ffffff;
-        }
     }
 }
-
-.projects-upper-row {
-    min-height: 280px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    &-card {
-        width: 270px;
+.projects {
+    padding: 80px 0 0 0;
+    &-upper-row {
+        min-height: 280px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        & svg {
-            width: 48px;
-            height: 48px;
-        }
-        p {
-            position: relative;
-            &::after {
-                content: "";
-                background-color: rgb(241, 238, 233);
-                display: block;
-                width: 70px;
-                height: 3px;
-                position: absolute;
-                top: 100px;
-                left: 95px;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &-card {
+            width: 270px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & svg {
+                width: 48px;
+                height: 48px;
+            }
+
+            &__title {
+                font-size: 22px;
+                font-family: "Raleway SemiBold";
+                color: rgb(85, 85, 85);
+                font-weight: normal;
+                line-height: 1.2;
+                text-align: center;
+            }
+
+            p {
+                position: relative;
+                &::after {
+                    content: "";
+                    background-color: rgb(241, 238, 233);
+                    display: block;
+                    width: 70px;
+                    height: 3px;
+                    position: absolute;
+                    top: 100px;
+                    left: 95px;
+                }
             }
         }
     }
 }
-
 .projects-lower-column {
     padding: 80px 0 0 0;
     background-color: #fbfaf8;
@@ -218,5 +249,195 @@ a {
     justify-content: space-between;
     .text {
         width: 760px;
+    }
+}
+
+.aside {
+    min-width: 1920px;
+    height: 150px;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+    .title {
+        color: #ffffff;
+        font-family: "Raleway";
+        font-weight: 400;
+        margin: 0;
+    }
+    .text {
+        margin: 0;
+    }
+    &-purchase {
+        display: flex;
+        &__container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &__text-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+
+.white-button {
+    height: 32px;
+    width: 120px;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    background: #ffffff;
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 300;
+    color: #8c8c8c;
+}
+
+.latest-projects-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__text-wrapper {
+        width: 757px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__button-wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 605px;
+    }
+}
+
+.project-article {
+    margin: 0 0 30px 0;
+    &__image {
+        object-fit: cover;
+        width: 370px;
+        height: 237px;
+    }
+    &__text-wrapper {
+        width: 370px;
+        height: 100px;
+        background-color: #fbfaf8;
+        padding: 0 0 0 28px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        &:after {
+            width: 3px;
+            height: 3px;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            position: absolute;
+            content: "";
+            border-bottom: 20px solid #fbfaf8;
+            top: -16px;
+            left: 29px;
+        }
+
+        .title {
+            font-size: 20px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: #c7b299;
+            text-align: left;
+            margin: 0;
+        }
+        .text {
+            text-align: left;
+            line-height: 28px;
+            margin: 0;
+        }
+    }
+}
+
+.article-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background: #eeeeee;
+    &-file {
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+
+        object-fit: cover;
+        overflow: hidden;
+
+        display: block;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+    &__content {
+        width: 552px;
+        height: 314px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: absolute;
+        margin: 0 auto;
+        content: "";
+        top: 450px;
+        left: auto;
+        .title,
+        .text {
+            color: #ffffff;
+        }
+    }
+}
+
+.mobile-product {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1140px;
+    }
+    &__text-wrapper {
+        width: 657px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .text {
+            text-align: left;
+            padding-bottom: 10px;
+        }
+    }
+    &__list {
+        align-self: center;
+    }
+    &__item {
+        position: relative;
+        margin-bottom: 5px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            background: url(../icons/bullet-point.svg);
+            background-size: 21px 21px;
+            top: 2px;
+            left: -34px;
+        }
     }
 }

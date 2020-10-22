@@ -1,13 +1,82 @@
-@font-face {
-  font-family: "Raleway";
-  src: url(../fonts/Raleway-VariableFont_wght.ttf);
-  font-family: "Montserrat";
-  src: url(../fonts/Montserrat-Medium.ttf);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-* {
-  padding: 0;
-  margin: 0;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat Light.woff2") format("woff2"), url("../fonts/Montserrat Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat Regular.woff2") format("woff2"), url("../fonts/Montserrat Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: "Raleway SemiBold";
+  src: url("../fonts/Raleway SemiBold.woff2") format("woff2"), url("../fonts/Raleway SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway Bold.woff2") format("woff2"), url("../fonts/Raleway Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway Regular.woff2") format("woff2"), url("../fonts/Raleway Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-2044;
 }
 
 a {
@@ -25,15 +94,17 @@ a {
   color: #8c8c8c;
   line-height: 1.714;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .title {
   font-size: 30px;
-  font-family: "Raleway";
+  font-family: "Raleway SemiBold";
   color: #555555;
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 24px;
 }
 
 .page-subject {
@@ -43,6 +114,7 @@ a {
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
+  margin-bottom: 19px;
 }
 
 .container {
@@ -66,6 +138,22 @@ a {
   margin: 0 20px;
 }
 
+.light-brown-button {
+  color: #ffffff;
+  width: 170px;
+  height: 53px;
+  background-color: #998675;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  font-family: "Raleway";
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.643;
+  text-align: center;
+}
+
 .header {
   min-height: 1024px;
   padding: 50px;
@@ -79,6 +167,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  color: #ffffff;
   background-image: url("../images/header-background.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -191,6 +280,16 @@ a {
   width: 595px;
 }
 
+.slider__central-page-part .text {
+  font-size: 16px;
+  font-family: "Montserrat Light";
+  font-weight: 300;
+  font-style: normal;
+  color: white;
+  line-height: 1.5;
+  text-align: center;
+}
+
 .slider__button {
   width: 40px;
   height: 73px;
@@ -208,8 +307,8 @@ a {
           transform: scale(-1, 1);
 }
 
-.slider__button_get-started {
-  color: #ffffff;
+.projects {
+  padding: 80px 0 0 0;
 }
 
 .projects-upper-row {
@@ -245,6 +344,15 @@ a {
 .projects-upper-row-card svg {
   width: 48px;
   height: 48px;
+}
+
+.projects-upper-row-card__title {
+  font-size: 22px;
+  font-family: "Raleway SemiBold";
+  color: #555555;
+  font-weight: normal;
+  line-height: 1.2;
+  text-align: center;
 }
 
 .projects-upper-row-card p {
@@ -285,5 +393,288 @@ a {
 
 .projects-lower-column .text {
   width: 760px;
+}
+
+.aside {
+  min-width: 1920px;
+  height: 150px;
+  background-color: #f4f5f8;
+  background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+
+.aside .title {
+  color: #ffffff;
+  font-family: "Raleway";
+  font-weight: 400;
+  margin: 0;
+}
+
+.aside .text {
+  margin: 0;
+}
+
+.aside-purchase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aside-purchase__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aside-purchase__text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.white-button {
+  height: 32px;
+  width: 120px;
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  background: #ffffff;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
+  color: #8c8c8c;
+}
+
+.latest-projects-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.latest-projects-section__text-wrapper {
+  width: 757px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.latest-projects-section__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 605px;
+}
+
+.project-article {
+  margin: 0 0 30px 0;
+}
+
+.project-article__image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 370px;
+  height: 237px;
+}
+
+.project-article__text-wrapper {
+  width: 370px;
+  height: 100px;
+  background-color: #fbfaf8;
+  padding: 0 0 0 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.project-article__text-wrapper:after {
+  width: 3px;
+  height: 3px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  position: absolute;
+  content: "";
+  border-bottom: 20px solid #fbfaf8;
+  top: -16px;
+  left: 29px;
+}
+
+.project-article__text-wrapper .title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  color: #c7b299;
+  text-align: left;
+  margin: 0;
+}
+
+.project-article__text-wrapper .text {
+  text-align: left;
+  line-height: 28px;
+  margin: 0;
+}
+
+.article-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 40px 0;
+}
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  background: #eeeeee;
+}
+
+.video-file {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  display: block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.video__content {
+  width: 552px;
+  height: 314px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  margin: 0 auto;
+  content: "";
+  top: 450px;
+  left: auto;
+}
+
+.video__content .title,
+.video__content .text {
+  color: #ffffff;
+}
+
+.mobile-product__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1140px;
+}
+
+.mobile-product__text-wrapper {
+  width: 657px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.mobile-product__text-wrapper .text {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.mobile-product__list {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.mobile-product__item {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.mobile-product__item::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  background: url(../icons/bullet-point.svg);
+  background-size: 21px 21px;
+  top: 2px;
+  left: -34px;
 }
 /*# sourceMappingURL=style.css.map */
