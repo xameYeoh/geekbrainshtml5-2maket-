@@ -48,8 +48,29 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     &__link_cart {
         margin: 0 20px;
+        svg {
+            fill: #ffffff;
+        }
+        &:hover,
+        &:active {
+            svg {
+                fill: #c7b299;
+            }
+        }
+    }
+    &__search-button {
+        svg {
+            fill: #ffffff;
+        }
+        &:hover,
+        &:active {
+            svg {
+                fill: #c7b299;
+            }
+        }
     }
 }
 
@@ -78,7 +99,7 @@ a {
 
 .light-brown-button {
     color: #ffffff;
-
+    cursor: pointer;
     width: 170px;
     height: 53px;
     background-color: #998675;
@@ -92,6 +113,10 @@ a {
     text-transform: uppercase;
     line-height: 1.643;
     text-align: center;
+    &:hover,
+    &:active {
+        box-shadow: 0 4px 2px -2px #736357;
+    }
 }
 
 .header {
@@ -124,6 +149,9 @@ a {
     }
     &__navigation-item {
         margin: 0 20px 0 0;
+        &:hover {
+            color: #bfab94;
+        }
     }
     &__navigation-link {
         color: #ffffff;
@@ -138,6 +166,7 @@ a {
             opacity: 0.502;
             width: 11px;
             height: 11px;
+            cursor: pointer;
             &:checked {
                 border-style: solid;
                 border-width: 2px;
@@ -187,10 +216,24 @@ a {
         cursor: pointer;
         &_left {
             background: url(../icons/header-left-button-icon.png);
+            &:hover,
+            &:active {
+                background: url(../icons/header-right-button-icon-active.png);
+                transform: scale(-1, 1);
+            }
         }
         &_right {
             background: url(../icons/header-left-button-icon.png);
             transform: scale(-1, 1);
+            &:hover,
+            &:active {
+                background: url(../icons/header-right-button-icon-active.png);
+                transform: scale(1, -1);
+            }
+        }
+        & svg:hover,
+        & svg:active {
+            fill: black;
         }
     }
 }
@@ -208,6 +251,19 @@ a {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            &:hover,
+            &:active {
+                cursor: pointer;
+                svg {
+                    fill: #c7b299;
+                }
+                .title {
+                    color: #c7b299;
+                }
+                .text::after {
+                    background-color: #c7b299;
+                }
+            }
             & svg {
                 width: 48px;
                 height: 48px;
@@ -222,7 +278,7 @@ a {
                 text-align: center;
             }
 
-            p {
+            .text {
                 position: relative;
                 &::after {
                     content: "";
@@ -292,6 +348,12 @@ a {
     line-height: 21px;
     font-weight: 300;
     color: #8c8c8c;
+    cursor: pointer;
+    &:active,
+    &:hover {
+        background-color: #998675;
+        color: #ffffff;
+    }
 }
 
 .latest-projects-section {
@@ -314,12 +376,68 @@ a {
 
 .project-article {
     margin: 0 0 30px 0;
+    position: relative;
+
+    &__link-icon {
+        top: 106px;
+        left: 144px;
+    }
+    &__lupa-icon {
+        top: 106px;
+        left: 198px;
+    }
+    &__link {
+        &:hover {
+            svg {
+                fill: #c7b299;
+            }
+        }
+    }
+    & svg {
+        content: "";
+        width: 29px;
+        height: 27px;
+        position: absolute;
+        visibility: hidden;
+        fill: #ffffff;
+    }
+
+    &:hover,
+    &:active {
+        svg {
+            visibility: visible;
+            z-index: 3;
+        }
+        &::after {
+            content: "";
+            width: 370px;
+            height: 237px;
+            position: absolute;
+            background-color: rgba($color: #000000, $alpha: 0.4);
+            top: 0;
+            left: 0;
+        }
+        .project-article__text-wrapper {
+            background-color: #362f2d;
+            &::after {
+                border-bottom: 20px solid #362f2d;
+            }
+        }
+        .title {
+            color: #ffffff;
+        }
+        .text {
+            color: #c7b299;
+        }
+    }
+
     &__image {
         object-fit: cover;
         width: 370px;
         height: 237px;
     }
     &__text-wrapper {
+        z-index: 2;
         width: 370px;
         height: 100px;
         background-color: #fbfaf8;
@@ -330,8 +448,6 @@ a {
         justify-content: center;
         position: relative;
         &:after {
-            width: 3px;
-            height: 3px;
             border-left: 20px solid transparent;
             border-right: 20px solid transparent;
             position: absolute;
