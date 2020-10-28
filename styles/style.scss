@@ -10,7 +10,6 @@ a {
 }
 
 .section {
-    min-width: 1440px;
     padding: 80px 0;
 }
 
@@ -439,7 +438,7 @@ a {
     align-items: center;
 
     &__text-wrapper {
-        width: 757px;
+        max-width: 757px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -921,6 +920,108 @@ a {
         &:hover,
         &:active {
             color: #c7b299;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .navigation,
+    .header__radio,
+    .projects-lower-column,
+    .aside,
+    .video-section,
+    .latest-projects-section,
+    .sponsors,
+    .socials,
+    .slider {
+        display: none;
+    }
+
+    img {
+        max-width: 350px;
+    }
+
+    * div {
+        width: 100%;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .container {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .navigation-burger {
+        &__icon-part {
+            width: 64px;
+            min-height: 9px;
+            background-color: #ffffff;
+            margin: 0 0 6px 20px;
+        }
+    }
+
+    .section {
+        padding: 25px 10px;
+    }
+
+    .header {
+        min-height: 10vh;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    .projects-upper-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .latest-projects-section {
+        &__text-wrapper {
+            max-width: 757px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .mobile-product {
+        &__container {
+            flex-direction: column;
+        }
+        &__text-wrapper {
+            width: 300px;
+            padding: 20px 0 0 0;
+        }
+    }
+
+    .product-article {
+        &__text-wrapper {
+            padding: 30px 0 30px 30px;
+        }
+    }
+    .recent-products {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__slider {
+            text-align: center;
+        }
+    }
+    .credentials {
+        &__container {
+            flex-direction: column;
+        }
+        &__info {
+            flex-direction: column;
         }
     }
 }
