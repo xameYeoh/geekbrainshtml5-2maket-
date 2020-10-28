@@ -159,12 +159,12 @@ a {
     }
     &__navigation-item {
         margin: 0 20px 0 0;
-        &:hover {
-            color: #bfab94;
-        }
     }
     &__navigation-link {
         color: #ffffff;
+        &:hover {
+            color: #bfab94;
+        }
     }
 
     input[type="radio"] + label {
@@ -815,6 +815,7 @@ a {
 }
 
 .socials {
+    @extend .section;
     background-color: #191919;
     &__about-company {
         background: #191919;
