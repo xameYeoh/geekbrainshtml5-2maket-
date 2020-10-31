@@ -98,6 +98,9 @@ a {
 
 .section, .socials {
   padding: 80px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 100vw;
 }
 
 .text, .credentials__link {
@@ -501,7 +504,7 @@ a {
 }
 
 .aside {
-  min-width: 1920px;
+  min-width: 100vw;
   height: 150px;
   background-color: #f4f5f8;
   background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
@@ -806,6 +809,8 @@ a {
           align-items: center;
   position: relative;
   background: #eeeeee;
+  position: relative;
+  overflow: hidden;
 }
 
 .video-file {
