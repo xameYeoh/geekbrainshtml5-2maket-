@@ -1292,7 +1292,7 @@ a {
     max-width: 350px;
   }
   * div {
-    width: 100%;
+    max-width: 100%;
   }
   .text, .credentials__link {
     width: 100%;
@@ -1365,8 +1365,16 @@ a {
     width: 300px;
     padding: 20px 0 0 0;
   }
+  .mobile-product__item::before {
+    left: -7vw;
+    top: 1px;
+  }
+  .product-article {
+    max-width: 350px;
+  }
   .product-article__text-wrapper {
     padding: 30px 0 30px 30px;
+    max-width: 350px;
   }
   .recent-products__wrapper {
     -webkit-box-orient: vertical;
