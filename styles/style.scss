@@ -439,6 +439,17 @@ a {
                 top: 169px;
                 left: 53px;
             }
+            &:hover,
+            &:active {
+                cursor: pointer;
+                svg {
+                    animation: scale 1s infinite;
+                    animation-direction: alternate;
+                }
+                .rotate-animation {
+                    animation: spin 0.5s ease-in-out;
+                }
+            }
         }
     }
 }

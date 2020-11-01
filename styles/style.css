@@ -663,6 +663,22 @@ a {
   left: 53px;
 }
 
+.aside-statistics__card:hover, .aside-statistics__card:active {
+  cursor: pointer;
+}
+
+.aside-statistics__card:hover svg, .aside-statistics__card:active svg {
+  -webkit-animation: scale 1s infinite;
+          animation: scale 1s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.aside-statistics__card:hover .rotate-animation, .aside-statistics__card:active .rotate-animation {
+  -webkit-animation: spin 0.5s ease-in-out;
+          animation: spin 0.5s ease-in-out;
+}
+
 .white-button {
   height: 32px;
   width: 120px;
