@@ -290,10 +290,27 @@ a {
 
 .header__navigation-link {
   color: #ffffff;
+  position: relative;
+}
+
+.header__navigation-link::after {
+  content: "";
+  background-color: #bfab94;
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  top: 22px;
+  left: 0px;
 }
 
 .header__navigation-link:hover {
   color: #bfab94;
+}
+
+.header__navigation-link:hover::after {
+  width: 100%;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
 }
 
 .header input[type="radio"] + label {
