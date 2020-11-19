@@ -549,6 +549,7 @@ a {
     }
 
     &__image {
+        display: block;
         object-fit: cover;
         width: 370px;
         height: 237px;
@@ -691,6 +692,10 @@ a {
     height: auto;
     position: relative;
 
+    img {
+        display: block;
+    }
+
     &:hover {
         cursor: pointer;
         &::after {
@@ -704,6 +709,7 @@ a {
         }
         .product-article__text-wrapper {
             background: #362f2d;
+            border: none;
         }
         .title {
             color: #c7b299;
@@ -752,6 +758,7 @@ a {
         padding: 30px;
         border: 1px solid #f8f8f8;
         box-sizing: border-box;
+        border-top: none;
     }
 }
 
