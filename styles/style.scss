@@ -1,6 +1,18 @@
 @import "reset.scss";
 @import "fonts.scss";
 
+@keyframes scale {
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 a {
     text-decoration: none;
 }
@@ -163,8 +175,22 @@ a {
     }
     &__navigation-link {
         color: #ffffff;
+        position: relative;
+        &::after {
+            content: "";
+            background-color: #bfab94;
+            width: 0%;
+            height: 3px;
+            position: absolute;
+            top: 22px;
+            left: 0px;
+        }
         &:hover {
             color: #bfab94;
+            &::after {
+                width: 100%;
+                transition: width 0.5s ease-in-out;
+            }
         }
     }
 
@@ -275,6 +301,7 @@ a {
         }
     }
 }
+
 .projects {
     padding: 80px 0 0 0;
     &-upper-row {
@@ -300,6 +327,7 @@ a {
                 }
                 .text::after {
                     background-color: #c7b299;
+                    animation: spin 2s infinite;
                 }
             }
             & svg {
@@ -411,6 +439,17 @@ a {
                 top: 169px;
                 left: 53px;
             }
+            &:hover,
+            &:active {
+                cursor: pointer;
+                svg {
+                    animation: scale 1s infinite;
+                    animation-direction: alternate;
+                }
+                .rotate-animation {
+                    animation: spin 0.5s ease-in-out;
+                }
+            }
         }
     }
 }
@@ -510,6 +549,7 @@ a {
     }
 
     &__image {
+        display: block;
         object-fit: cover;
         width: 370px;
         height: 237px;
@@ -638,6 +678,12 @@ a {
             top: 2px;
             left: -34px;
         }
+        &:hover,
+        &:active {
+            &::before {
+                animation: spin 2s infinite;
+            }
+        }
     }
 }
 
@@ -645,6 +691,10 @@ a {
     width: 370px;
     height: auto;
     position: relative;
+
+    img {
+        display: block;
+    }
 
     &:hover {
         cursor: pointer;
@@ -659,6 +709,7 @@ a {
         }
         .product-article__text-wrapper {
             background: #362f2d;
+            border: none;
         }
         .title {
             color: #c7b299;
@@ -707,6 +758,7 @@ a {
         padding: 30px;
         border: 1px solid #f8f8f8;
         box-sizing: border-box;
+        border-top: none;
     }
 }
 
@@ -793,6 +845,7 @@ a {
         left: 84px;
     }
 }
+
 .sponsors {
     background: url(../images/footer-bg-mountains.png);
     background-size: cover;
@@ -804,6 +857,15 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    &__link {
+        &:hover,
+        :active {
+            img {
+                animation: scale 2s infinite;
+                animation-direction: alternate;
+            }
+        }
     }
 }
 
